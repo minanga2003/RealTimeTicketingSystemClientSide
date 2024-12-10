@@ -1,0 +1,106 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #8ca6bf; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    overflow: hidden;
+}
+
+.form-container {
+    position: relative;
+    margin-left: 4rem;
+    top: 2rem;
+    align-items: center;    
+    height: 100vh;  
+}
+
+.form-wrapper {
+    background: linear-gradient(to bottom right, #9cb0de, #97b2dd);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;  
+    height: 38rem;  
+}
+
+.form-wrapper h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Error container to reserve space even if there's no error message */
+.error-container {
+    min-height: 50px; 
+    margin-bottom: 1rem;
+}
+
+/* Matching label style from output component */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+/* Adjusting form controls for a consistent look */
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+    padding: 10px;
+    font-size: 14px;
+    color: #242424;
+    background: #e9eaec;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 3px rgba(13,110,253,0.5);
+    outline: none;
+}
+
+.button {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    width: 100%;
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: rgb(3, 3, 119);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    background-color: rgb(45, 2, 85);
+}
+
+.alert.alert-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+}

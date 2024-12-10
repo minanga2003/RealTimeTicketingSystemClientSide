@@ -1,0 +1,80 @@
+<div class="form-container">
+  <div class="form-wrapper">
+    <h2>Configuration</h2>
+    <form>
+      <!-- Max Ticket Capacity Field -->
+      <div class="mb-3">
+        <label for="maxTicketCapacity" class="form-label">Enter Max Ticket Capacity</label>
+        <input 
+          type="number" 
+          class="form-control" 
+          id="maxTicketCapacity" 
+          name="max_ticket_capacity" 
+          required 
+          min="1" 
+          placeholder="Enter maximum ticket capacity"
+          [(ngModel)]="ticketData.maxTicketCapacity"
+        >
+      </div>
+
+      <!-- Total Tickets Field -->
+      <div class="mb-3">
+        <label for="totalTickets" class="form-label">Enter Total Tickets</label>
+        <input 
+          type="number" 
+          class="form-control" 
+          id="totalTickets" 
+          name="total_tickets" 
+          required 
+          min="1" 
+          placeholder="Enter total number of tickets"
+          [(ngModel)]="ticketData.totalTickets"
+        >
+      </div>
+
+      <!-- Ticket Release Rate Field -->
+      <div class="mb-3">
+        <label for="ticketReleaseRate" class="form-label">Enter Ticket Release Rate (ms)</label>
+        <input 
+          type="number" 
+          class="form-control" 
+          id="ticketReleaseRate" 
+          name="ticket_release_rate" 
+          required 
+          min="1" 
+          placeholder="Enter ticket release rate"
+          [(ngModel)]="ticketData.ticketReleaseRate"
+        >
+      </div>
+
+      <!-- Customer Retrieval Rate Field -->
+      <div class="mb-3">
+        <label for="customerRetrievalRate" class="form-label">Enter Customer Retrieval Rate (ms)</label>
+        <input 
+          type="number" 
+          class="form-control" 
+          id="customerRetrievalRate" 
+          name="customer_retrieval_rate" 
+          required 
+          min="1" 
+          placeholder="Enter customer retrieval rate"
+          [(ngModel)]="ticketData.customerRetrievalRate"
+        >
+      </div>
+
+      <!-- Error Message Container -->
+      <div class="error-container">
+        <div *ngIf="errorMessage" class="alert alert-danger">
+          {{ errorMessage }}
+        </div>
+      </div>
+
+      <!-- Configure Buttons -->
+      <div class="button">
+        <button type="submit" class="btn btn-primary" (click)="configuration()">Configure</button>
+        <button type="button" class="btn btn-primary" (click)="loadPreviousConfig()">Load Previous Configuration</button>
+      </div>
+    </form>
+  </div>
+</div>
+
